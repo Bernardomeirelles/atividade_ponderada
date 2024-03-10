@@ -1,3 +1,11 @@
+
+
+
+
+// desconsiderar apenas teste
+
+
+
 class FinanceiroFuncionario {
     constructor(nome, idade, salariobase) {
         this.nome = nome;
