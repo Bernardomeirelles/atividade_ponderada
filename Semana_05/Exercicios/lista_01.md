@@ -122,9 +122,11 @@ Dica: Utilize `console.log()` para exibir as informações!
 `
 
 ```
-//crianco a classe
+//crianco a classe Animal
 class Animal  {
 
+
+// criando o constructor da classe e seus atributos
   constructor(nome, idade){
   this.nome = nome
   this.idade = idade
@@ -135,7 +137,9 @@ class Animal  {
   }
 
 }
+//criando a variavel do cachorro e suas caracteristicas
  var cachorro = new Animal ('cachorro','7anos')
+ //chamando a função descrever
  cachorro.descrever()
 ```
 ______
@@ -173,7 +177,7 @@ class Animal  {
 }
   descrever() {
     console.log(this.nome, this.idade)
-  /função que descreve o nome e a idade do animal
+  //função que descreve o nome e a idade do animal
   }
 
 }
@@ -191,7 +195,7 @@ super (nome, idade);//adicionando os elementos herdados
 
   } 
   miar() { // função para miar
-    console.log('miaaaaau')
+    console.log('miaaaaau') // imprimir miau
   }
 
   descrever() { // função para imprimir o nome, idade e cor
@@ -251,6 +255,8 @@ class SomadorDeNotas{
   }
 
 }
+
+//criando a varivel de somador de notas
 let soma = new SomadorDeNotas()
 
 
@@ -295,6 +301,7 @@ class FinanceiroFuncionario {
     }
 }
 
+// extendendo as propiedades da classe funcionario para a classe professor 
 class FinanceiroProfessor extends FinanceiroFuncionario {
     constructor(nome, idade, salariobase, disciplina, horasdeaula, valorhora) {
         super(nome, idade, salariobase);
@@ -302,18 +309,20 @@ class FinanceiroProfessor extends FinanceiroFuncionario {
         this.horasdeaula = horasdeaula;
         this.valorhora = valorhora;
     }
-
+    
+    // função para calcular o salario dos professores 
     calcularSalario() {
-        let SalarioProfessor = this.salariobase + this.valorhora * this.horasdeaula;
+        let SalarioProfessor =  this.valorhora * this.horasdeaula;
         return SalarioProfessor;
     }
 }
 // criando a constante para os professores 
 
-const professor1 = new FinanceiroProfessor('João', 22, 1500, 'Matemática', 3, 50);
-const professor2 = new FinanceiroProfessor('Maria', 20 , 1600, 'Inglês',4,50 )
+const professor1 = new FinanceiroProfessor('João', 22, 0, 'Matemática', 40, 50);
+const professor2 = new FinanceiroProfessor('Maria', 20 , 0, 'Inglês', 50,50 );
 
-// console log que imprimirá no console as informações do salário dos professores
+// imprimindo a resposta para o salario
 console.log('Salário do Professor João é', professor1.calcularSalario()); 
 console.log('Salário da professora Maria é:', professor2.calcularSalario());
+
 ```
