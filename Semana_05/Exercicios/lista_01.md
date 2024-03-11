@@ -299,6 +299,9 @@ class FinanceiroFuncionario {
         this.idade = idade;
         this.salariobase = salariobase;
     }
+    calcularSalario() {
+        // Este método será implementado nas classes filhas
+    }
 }
 
 // extendendo as propiedades da classe funcionario para a classe professor 
